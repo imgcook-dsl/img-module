@@ -355,6 +355,12 @@ module.exports = function(schema, option) {
     singleQuote: true
   };
 
+  //生成引入img src的import语句
+  for (const i in srcs) {
+      const ele = srcs[i];
+      imports.push(`import img_${i} from '${ele}'`);
+  }
+
   return {
     panelDisplay: [
       {
