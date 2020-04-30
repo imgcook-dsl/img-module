@@ -13,6 +13,9 @@ module.exports = function(schema, option) {
   // Classes 
   const classes = [];
 
+  //img src
+  const srcs = [];
+
   // 1vw = width / 100
   const _w = option.responsive.width / 100;
 
@@ -201,10 +204,19 @@ module.exports = function(schema, option) {
   const generateRender = (schema) => {
     const type = schema.componentName.toLowerCase();
     const className = schema.props && schema.props.className;
+    const src = schema.props && schema.props.src;
     const classString = className ? ` style={styles.${className}}` : '';
 
     if (className) {
       style[className] = parseStyle(schema.props.style);
+    }
+    if (src) {
+        if (!/^(https?)/.test(src)) {
+            if (/^(.\/)/.test(src)) {
+                //找出相对路径的img src
+                srcs.push(src);
+            }
+        }
     }
 
     let xml;
