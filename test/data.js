@@ -1,5 +1,5 @@
 module.exports = {
-  "componentName": "Page11",
+  "componentName": "Page",
   "id": "Block_745855",
   "rect": {
     "x": 0,
