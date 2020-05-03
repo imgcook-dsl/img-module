@@ -3,6 +3,10 @@
 import React, { Component } from 'react';
 import { fetch } from 'whatwg-fetch';
 import jsonp from 'fetch-jsonp';
+import img_0 from 'https://img.alicdn.com/tfs/TB1bLoWoYH1gK0jSZFwXXc7aXXa-684-684.png';
+import img_1 from 'https://img.alicdn.com/tfs/TB1mtZRoVT7gK0jSZFpXXaTkpXa-28-36.png';
+import img_2 from 'https://img.alicdn.com/tfs/TB1OvsYoW61gK0jSZFlXXXDKFXa-60-60.png';
+import img_3 from 'https://img.alicdn.com/tfs/TB1arwYo7T2gK0jSZFkXXcIQFXa-46-44.png';
 import styles from './style.js';
 const print = function(value) {
   console.log(value);
@@ -75,13 +79,10 @@ class Page_0 extends Component {
               key={item.index}
             >
               <div style={styles.bd}>
-                <img style={styles.layer} src={'https://img.alicdn.com/tfs/TB1bLoWoYH1gK0jSZFwXXc7aXXa-684-684.png'} />
-                <img style={styles.bg} src={item.coverImage} />
+                <img style={styles.layer} src={img_0} />
+                <img style={styles.bg} src={img_0} />
                 <div style={styles.wrap}>
-                  <img
-                    style={styles.riverdinwei}
-                    src={'https://img.alicdn.com/tfs/TB1mtZRoVT7gK0jSZFpXXaTkpXa-28-36.png'}
-                  />
+                  <img style={styles.riverdinwei} src={img_1} />
                   <span style={styles.distance}>距离500m</span>
                 </div>
               </div>
@@ -90,18 +91,12 @@ class Page_0 extends Component {
               </div>
               <div style={styles.ft}>
                 <div style={styles.block}>
-                  <img
-                    style={styles.xianjin}
-                    src={'https://img.alicdn.com/tfs/TB1OvsYoW61gK0jSZFlXXXDKFXa-60-60.png'}
-                  />
+                  <img style={styles.xianjin} src={img_2} />
                   <span style={styles.fashionHome}>{item.user.userName}</span>
                 </div>
                 {this.isReadCountShow(item.readCount) && (
                   <div style={styles.group}>
-                    <img
-                      style={styles.favorite}
-                      src={'https://img.alicdn.com/tfs/TB1arwYo7T2gK0jSZFkXXcIQFXa-46-44.png'}
-                    />
+                    <img style={styles.favorite} src={img_3} />
                     <span style={styles.num}>{item.readCount}</span>
                   </div>
                 )}
