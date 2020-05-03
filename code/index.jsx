@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { fetch } from 'whatwg-fetch';
 import jsonp from 'fetch-jsonp';
-import img_0 from 'https://img.alicdn.com/tfs/TB1bLoWoYH1gK0jSZFwXXc7aXXa-684png';
+import img_0 from 'https://img.alicdn.com/tfs/TB1bLoWoYH1gK0jSZFwXXc7aXXa-684-684.png';
 import img_1 from 'https://img.alicdn.com/tfs/TB1mtZRoVT7gK0jSZFpXXaTkpXa-28-36.png';
 import img_2 from 'https://img.alicdn.com/tfs/TB1OvsYoW61gK0jSZFlXXXDKFXa-60-60.png';
 import img_3 from 'https://img.alicdn.com/tfs/TB1arwYo7T2gK0jSZFkXXcIQFXa-46-44.png';
