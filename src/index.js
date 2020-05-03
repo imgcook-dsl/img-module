@@ -211,11 +211,8 @@ module.exports = function(schema, option) {
       style[className] = parseStyle(schema.props.style);
     }
     if (src) {
-        if (!/^(https?)/.test(src)) {
-            if (/^(.\/)/.test(src)) {
-                //找出相对路径的img src
-                srcs.push(src);
-            }
+        if (/^(https?)/.test(src)) {
+            srcs.push(src);
         }
     }
 
@@ -235,15 +232,9 @@ module.exports = function(schema, option) {
         break;
       case 'image':
         let source = parseProps(schema.props.src);
-        //替换相对路径的图片为模块化的地址
+        //替换img src为模块化的地址
         for (const i in srcs) {
-            const ele = srcs[i];
-
-            if(/^(\'.\/)/.test(source)) {
-                if(source.indexOf(ele) === 1) {
-                    source = `img_${i}`;
-                }
-            }
+            source = `img_${i}`;
         }
         xml = `<img${classString}${props} src={${source}} />`;
         break;
